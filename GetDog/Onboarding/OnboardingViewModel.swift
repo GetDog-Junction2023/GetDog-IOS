@@ -18,10 +18,9 @@ final class OnboardingViewModel: ObservableObject {
     }
     
     private(set) var onboardingPages: [OnboardingPage] = [
+        OnboardingPage(title: "Track Your Activity", headline: "Show your parents that you are responsible enough for owning a dog.", image: "Activity"),
         OnboardingPage(title: "Accesses", headline: "Allow Access to your Health Data", image: "HealthKit", isAccessPage: true),
-        OnboardingPage(title: "Two", headline: "Two", image: ""),
-        OnboardingPage(title: "Three", headline: "Three", image: ""),
-        OnboardingPage(title: "Four", headline: "Four", image: "")
+        OnboardingPage(title: "Apple Watch App + Widgets", headline: "This app also contains Apple Watch app and widgets", image: "AppleWatch"),
     ]
     
     func askHealthAccess(completion: @escaping () -> Void) {

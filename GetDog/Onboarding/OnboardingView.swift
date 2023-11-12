@@ -21,6 +21,7 @@ struct OnboardingView: View {
         }
         .ignoresSafeArea()
         .tabViewStyle(PageTabViewStyle())
+        .padding(.horizontal, 20)
         .padding(.bottom, 20)
     }
     

@@ -12,7 +12,7 @@ struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
     @State private var stepsCountThisWeek: Int = 0
     @State private var weekProgress: Double = 0
-    @State private var level: Int = 0
+    @State private var level: Int = 1
     @State private var scale: CGFloat = 1
     @State private var stepsArray: [Int] = []
     @State private var predictedStepsLeft: Int = 0

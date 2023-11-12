@@ -24,20 +24,6 @@ struct ParentView: View {
                     }
                 }
             }
-//        TabView {
-////            DashboardView()
-////                .tabItem {
-////                    Image(systemName: "house.fill")
-////                        .renderingMode(.template)
-////                }
-////
-////            TransactionsView()
-////                .tabItem {
-////                    Image(systemName: "list.bullet")
-////                        .renderingMode(.template)
-////                }
-//        }
-//        .accentColor(.black)
     }
 }
 
