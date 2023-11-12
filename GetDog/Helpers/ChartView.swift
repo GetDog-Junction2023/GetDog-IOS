@@ -36,19 +36,28 @@ struct BarView: View{
     var dayOfWeek: Int
     var maxValue: Int
     var value: Int
+    @State var progress: Double = 0.0
+    
+    var progressAnimation: Animation {
+        Animation
+            .linear
+            .speed(0.4)
+    }
     
     var body: some View {
         GeometryReader { proxy in
             VStack {
-                VStack {
-                    Spacer()
-                    
-                    RoundedRectangle(cornerRadius: 4)
-                        .frame(
-                            width: 30,
-                            height: abs(CGFloat(calculateHeight(maxHeight: proxy.size.height)))
-                        )
-                        .foregroundColor(.orange)
+                GeometryReader { geometry in
+                    VStack {
+                        Spacer()
+                        
+                        RoundedRectangle(cornerRadius: 4)
+                            .frame(
+                                height: abs(CGFloat(calculateHeight(maxHeight: proxy.size.height)) * CGFloat(progress))
+                            )
+                            .animation(progressAnimation)
+                            .foregroundColor(.orange)
+                    }
                 }
                 
                 VStack {
@@ -73,6 +82,9 @@ struct BarView: View{
                 .fontDesign(.rounded)
                 .foregroundColor(.black)
             }
+        }
+        .onAppear {
+            progress = 1
         }
     }
     

@@ -24,10 +24,22 @@
 		82ED9D452B003B8E00E8C107 /* StepsPrediction.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D442B003B8E00E8C107 /* StepsPrediction.mlmodel */; };
 		82ED9D472B00411200E8C107 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D462B00411200E8C107 /* ChartView.swift */; };
 		82ED9D4F2B00714200E8C107 /* GetDogWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D4E2B00714200E8C107 /* GetDogWatchApp.swift */; };
-		82ED9D512B00714200E8C107 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D502B00714200E8C107 /* ContentView.swift */; };
+		82ED9D512B00714200E8C107 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D502B00714200E8C107 /* HomeView.swift */; };
 		82ED9D532B00714400E8C107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82ED9D522B00714400E8C107 /* Assets.xcassets */; };
 		82ED9D562B00714400E8C107 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82ED9D552B00714400E8C107 /* Preview Assets.xcassets */; };
 		82ED9D592B00714400E8C107 /* GetDogWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 82ED9D4C2B00714200E8C107 /* GetDogWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		82ED9D652B008A6F00E8C107 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82ED9D642B008A6F00E8C107 /* WidgetKit.framework */; };
+		82ED9D672B008A6F00E8C107 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82ED9D662B008A6F00E8C107 /* SwiftUI.framework */; };
+		82ED9D6A2B008A7000E8C107 /* GetDogWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D692B008A7000E8C107 /* GetDogWidgetBundle.swift */; };
+		82ED9D6C2B008A7000E8C107 /* GetDogWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D6B2B008A7000E8C107 /* GetDogWidgetLiveActivity.swift */; };
+		82ED9D6E2B008A7000E8C107 /* GetDogWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D6D2B008A7000E8C107 /* GetDogWidget.swift */; };
+		82ED9D702B008A7000E8C107 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D6F2B008A7000E8C107 /* AppIntent.swift */; };
+		82ED9D722B008A7200E8C107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82ED9D712B008A7200E8C107 /* Assets.xcassets */; };
+		82ED9D762B008A7200E8C107 /* GetDogWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 82ED9D622B008A6F00E8C107 /* GetDogWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		82ED9D7C2B008B1100E8C107 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D7B2B008B1100E8C107 /* HomeViewModel.swift */; };
+		82ED9D7F2B008B8B00E8C107 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D7E2B008B8B00E8C107 /* Date+Extension.swift */; };
+		82ED9D822B008BAF00E8C107 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D812B008BAF00E8C107 /* HealthKitManager.swift */; };
+		82ED9D852B008BCF00E8C107 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D842B008BCF00E8C107 /* ProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +49,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 82ED9D4B2B00714200E8C107;
 			remoteInfo = "GetDogWatch Watch App";
+		};
+		82ED9D742B008A7200E8C107 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82ED9D042AFFAFB900E8C107 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82ED9D612B008A6F00E8C107;
+			remoteInfo = GetDogWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -50,6 +69,17 @@
 				82ED9D592B00714400E8C107 /* GetDogWatch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82ED9D7A2B008A7200E8C107 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				82ED9D762B008A7200E8C107 /* GetDogWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -75,9 +105,24 @@
 		82ED9D462B00411200E8C107 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		82ED9D4C2B00714200E8C107 /* GetDogWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GetDogWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ED9D4E2B00714200E8C107 /* GetDogWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDogWatchApp.swift; sourceTree = "<group>"; };
-		82ED9D502B00714200E8C107 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		82ED9D502B00714200E8C107 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		82ED9D522B00714400E8C107 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82ED9D552B00714400E8C107 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		82ED9D622B008A6F00E8C107 /* GetDogWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GetDogWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		82ED9D642B008A6F00E8C107 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		82ED9D662B008A6F00E8C107 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		82ED9D692B008A7000E8C107 /* GetDogWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDogWidgetBundle.swift; sourceTree = "<group>"; };
+		82ED9D6B2B008A7000E8C107 /* GetDogWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDogWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		82ED9D6D2B008A7000E8C107 /* GetDogWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDogWidget.swift; sourceTree = "<group>"; };
+		82ED9D6F2B008A7000E8C107 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		82ED9D712B008A7200E8C107 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		82ED9D732B008A7200E8C107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82ED9D7B2B008B1100E8C107 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		82ED9D7E2B008B8B00E8C107 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		82ED9D812B008BAF00E8C107 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		82ED9D842B008BCF00E8C107 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		82ED9D862B008F7700E8C107 /* GetDogWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GetDogWatch Watch App.entitlements"; sourceTree = "<group>"; };
+		82ED9D872B008F8200E8C107 /* GetDogWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GetDogWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,14 +140,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		82ED9D5F2B008A6F00E8C107 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82ED9D672B008A6F00E8C107 /* SwiftUI.framework in Frameworks */,
+				82ED9D652B008A6F00E8C107 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		82ED9D032AFFAFB900E8C107 = {
 			isa = PBXGroup;
 			children = (
+				82ED9D872B008F8200E8C107 /* GetDogWidgetExtension.entitlements */,
 				82ED9D0E2AFFAFB900E8C107 /* GetDog */,
 				82ED9D4D2B00714200E8C107 /* GetDogWatch Watch App */,
+				82ED9D682B008A6F00E8C107 /* GetDogWidget */,
+				82ED9D632B008A6F00E8C107 /* Frameworks */,
 				82ED9D0D2AFFAFB900E8C107 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +169,7 @@
 			children = (
 				82ED9D0C2AFFAFB900E8C107 /* GetDog.app */,
 				82ED9D4C2B00714200E8C107 /* GetDogWatch Watch App.app */,
+				82ED9D622B008A6F00E8C107 /* GetDogWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,8 +257,13 @@
 		82ED9D4D2B00714200E8C107 /* GetDogWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				82ED9D862B008F7700E8C107 /* GetDogWatch Watch App.entitlements */,
 				82ED9D4E2B00714200E8C107 /* GetDogWatchApp.swift */,
-				82ED9D502B00714200E8C107 /* ContentView.swift */,
+				82ED9D502B00714200E8C107 /* HomeView.swift */,
+				82ED9D7B2B008B1100E8C107 /* HomeViewModel.swift */,
+				82ED9D802B008BA200E8C107 /* Managers */,
+				82ED9D7D2B008B8000E8C107 /* Extensions */,
+				82ED9D832B008BC000E8C107 /* Helpers */,
 				82ED9D522B00714400E8C107 /* Assets.xcassets */,
 				82ED9D542B00714400E8C107 /* Preview Content */,
 			);
@@ -215,6 +278,52 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		82ED9D632B008A6F00E8C107 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82ED9D642B008A6F00E8C107 /* WidgetKit.framework */,
+				82ED9D662B008A6F00E8C107 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82ED9D682B008A6F00E8C107 /* GetDogWidget */ = {
+			isa = PBXGroup;
+			children = (
+				82ED9D692B008A7000E8C107 /* GetDogWidgetBundle.swift */,
+				82ED9D6B2B008A7000E8C107 /* GetDogWidgetLiveActivity.swift */,
+				82ED9D6D2B008A7000E8C107 /* GetDogWidget.swift */,
+				82ED9D6F2B008A7000E8C107 /* AppIntent.swift */,
+				82ED9D712B008A7200E8C107 /* Assets.xcassets */,
+				82ED9D732B008A7200E8C107 /* Info.plist */,
+			);
+			path = GetDogWidget;
+			sourceTree = "<group>";
+		};
+		82ED9D7D2B008B8000E8C107 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				82ED9D7E2B008B8B00E8C107 /* Date+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		82ED9D802B008BA200E8C107 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				82ED9D812B008BAF00E8C107 /* HealthKitManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		82ED9D832B008BC000E8C107 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				82ED9D842B008BCF00E8C107 /* ProgressView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,11 +335,13 @@
 				82ED9D092AFFAFB900E8C107 /* Frameworks */,
 				82ED9D0A2AFFAFB900E8C107 /* Resources */,
 				82ED9D5D2B00714400E8C107 /* Embed Watch Content */,
+				82ED9D7A2B008A7200E8C107 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				82ED9D582B00714400E8C107 /* PBXTargetDependency */,
+				82ED9D752B008A7200E8C107 /* PBXTargetDependency */,
 			);
 			name = GetDog;
 			productName = GetDog;
@@ -254,6 +365,23 @@
 			productReference = 82ED9D4C2B00714200E8C107 /* GetDogWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
+		82ED9D612B008A6F00E8C107 /* GetDogWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82ED9D772B008A7200E8C107 /* Build configuration list for PBXNativeTarget "GetDogWidgetExtension" */;
+			buildPhases = (
+				82ED9D5E2B008A6F00E8C107 /* Sources */,
+				82ED9D5F2B008A6F00E8C107 /* Frameworks */,
+				82ED9D602B008A6F00E8C107 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GetDogWidgetExtension;
+			productName = GetDogWidgetExtension;
+			productReference = 82ED9D622B008A6F00E8C107 /* GetDogWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -268,6 +396,9 @@
 						CreatedOnToolsVersion = 15.0;
 					};
 					82ED9D4B2B00714200E8C107 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					82ED9D612B008A6F00E8C107 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
@@ -287,6 +418,7 @@
 			targets = (
 				82ED9D0B2AFFAFB900E8C107 /* GetDog */,
 				82ED9D4B2B00714200E8C107 /* GetDogWatch Watch App */,
+				82ED9D612B008A6F00E8C107 /* GetDogWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -307,6 +439,14 @@
 			files = (
 				82ED9D562B00714400E8C107 /* Preview Assets.xcassets in Resources */,
 				82ED9D532B00714400E8C107 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82ED9D602B008A6F00E8C107 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82ED9D722B008A7200E8C107 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,8 +478,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82ED9D512B00714200E8C107 /* ContentView.swift in Sources */,
+				82ED9D512B00714200E8C107 /* HomeView.swift in Sources */,
+				82ED9D7F2B008B8B00E8C107 /* Date+Extension.swift in Sources */,
+				82ED9D7C2B008B1100E8C107 /* HomeViewModel.swift in Sources */,
+				82ED9D822B008BAF00E8C107 /* HealthKitManager.swift in Sources */,
 				82ED9D4F2B00714200E8C107 /* GetDogWatchApp.swift in Sources */,
+				82ED9D852B008BCF00E8C107 /* ProgressView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82ED9D5E2B008A6F00E8C107 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82ED9D6E2B008A7000E8C107 /* GetDogWidget.swift in Sources */,
+				82ED9D702B008A7000E8C107 /* AppIntent.swift in Sources */,
+				82ED9D6C2B008A7000E8C107 /* GetDogWidgetLiveActivity.swift in Sources */,
+				82ED9D6A2B008A7000E8C107 /* GetDogWidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +505,11 @@
 			isa = PBXTargetDependency;
 			target = 82ED9D4B2B00714200E8C107 /* GetDogWatch Watch App */;
 			targetProxy = 82ED9D572B00714400E8C107 /* PBXContainerItemProxy */;
+		};
+		82ED9D752B008A7200E8C107 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82ED9D612B008A6F00E8C107 /* GetDogWidgetExtension */;
+			targetProxy = 82ED9D742B008A7200E8C107 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -491,8 +651,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -525,8 +684,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -546,6 +704,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "GetDogWatch Watch App/GetDogWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GetDogWatch Watch App/Preview Content\"";
@@ -553,8 +712,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = GetDogWatch;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to access your Health data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow this app to write data to Health app";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.romanrakhlin.GetDog;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -567,7 +729,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Debug;
 		};
@@ -576,6 +738,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "GetDogWatch Watch App/GetDogWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GetDogWatch Watch App/Preview Content\"";
@@ -583,8 +746,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = GetDogWatch;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to access your Health data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow this app to write data to Health app";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.romanrakhlin.GetDog;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -597,7 +763,67 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		82ED9D782B008A7200E8C107 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = GetDogWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3868R87QJX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GetDogWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GetDogWidget;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to access your Health data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow this app to write data to Health app";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.romanrakhlin.GetDog.GetDogWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		82ED9D792B008A7200E8C107 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = GetDogWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3868R87QJX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GetDogWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GetDogWidget;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to access your Health data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow this app to write data to Health app";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.romanrakhlin.GetDog.GetDogWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -627,6 +853,15 @@
 			buildConfigurations = (
 				82ED9D5B2B00714400E8C107 /* Debug */,
 				82ED9D5C2B00714400E8C107 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82ED9D772B008A7200E8C107 /* Build configuration list for PBXNativeTarget "GetDogWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82ED9D782B008A7200E8C107 /* Debug */,
+				82ED9D792B008A7200E8C107 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -127,7 +127,6 @@ struct HomeView: View {
             viewModel.getStepsTakenThisWeek { stepsCount in
                 stepsCountThisWeek = stepsCount
                 weekProgress = min(1.0, Double(stepsCount) / Double(stepsCount + predictedStepsLeft))
-                level = viewModel.calculateLevel(from: weekProgress)
             }
             
             viewModel.getArrayOfStepsForThisWeek { array in

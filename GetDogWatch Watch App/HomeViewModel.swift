@@ -13,30 +13,35 @@ final class HomeViewModel: ObservableObject {
     
     var stepsArray: [Int] = []
     
-    @AppStorage("firstLaunchDate") var firstLaunchDate: Date = Date()
     private let healthKitManager = HealthKitManager.shared
     
-    func createPageSubtitle() -> String? {
-        let currentDate = Date()
-        
-        if
-            let startOfWeek = currentDate.startOfWeek,
-            let endOfWeek = currentDate.endOfWeek
-        {
-            let startWeekDay = startOfWeek.formatted(Date.FormatStyle().day(.twoDigits))
-            let startMonthName = startOfWeek.formatted(Date.FormatStyle().month(.abbreviated))
+    var healthIsAuthorized: Bool {
+        healthKitManager.isAuthorized
+    }
+    
+    func calculateLevel(from persentage: Double) -> Int {
+        let clampedValue = max(0.0, min(1.0, persentage))
+        let level = Int(clampedValue * 5) + 1
+        return level
+    }
+    
+    func askHealthAccess(completion: @escaping () -> Void) {
+        healthKitManager.requestAccess { error in
+            if let error = error as? HealthKitManagerError {
+                if error == .deniedAccess {
+                    print("User denied access to Health")
+                }
+                
+            }
             
-            let endWeekDay = endOfWeek.formatted(Date.FormatStyle().day(.twoDigits))
-            let endMonthName = endOfWeek.formatted(Date.FormatStyle().month(.abbreviated))
-            
-            return "\(startWeekDay) \(startMonthName) - \(endWeekDay) \(endMonthName)"
-        } else {
-            return nil
+            DispatchQueue.main.async {
+                completion()
+            }
         }
     }
     
     func getStepsTakenThisWeek(completion: @escaping (Int) -> Void) {
-        guard let startOfTheWeek = Date().startOfWeek else {
+        guard  let startOfTheWeek = Date().startOfWeek else {
             return
         }
         
@@ -107,28 +112,5 @@ final class HomeViewModel: ObservableObject {
             self.stepsArray = stepsArray
             completion(stepsArray)
         }
-    }
-    
-    func predictSteps() -> Int? {
-        let age = healthKitManager.getAge()
-        let gender = healthKitManager.getGender()
-        let height: Double = 180
-        let weight: Double = 80
-        let degrees: Double = 10
-        
-        guard
-            let model = try? StepsPrediction(),
-            let prediction = try? model.prediction(
-                dayOfWeek: Double(Calendar.current.component(.weekday, from: Date())) - 1,
-                degrees: degrees,
-                lastWeekAverageSteps: Double(stepsArray.reduce(0, +)) / Double(stepsArray.count),
-                gender: Double(gender),
-                age: Double(age),
-                weight: weight,
-                height: height
-            )
-        else { return 0 }
-        
-        return Int(prediction.steps)
     }
 }
