@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "DALL·E 2023-11-11 15.37.30 - Illustrate the face of a 3D cartoon dog character at level 20, closely following the design and style of Apple's Animoji. The image should show the pu (1)@1x.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "DALL·E 2023-11-11 15.37.30 - Illustrate the face of a 3D cartoon dog character at level 20, closely following the design and style of Apple's Animoji. The image should show the pu (1)@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "DALL·E 2023-11-11 15.37.30 - Illustrate the face of a 3D cartoon dog character at level 20, closely following the design and style of Apple's Animoji. The image should show the pu (1)@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
