@@ -38,7 +38,7 @@ final class HealthKitManager: ObservableObject {
         }
     }
     
-    public func readStepsTaken(
+    public func getStepsTaken(
         from startDate: Date,
         to endDate: Date,
         completion: @escaping (Error?, Int?) -> ()
@@ -47,7 +47,7 @@ final class HealthKitManager: ObservableObject {
             return completion(HealthKitManagerError.healthDataIsNotAuthorized, nil)
         }
         
-        readStepsCount(from: startDate, to: endDate) { error, stepsCount in
+        getStepsCount(from: startDate, to: endDate) { error, stepsCount in
             completion(error, stepsCount)
         }
     }
@@ -141,7 +141,7 @@ extension HealthKitManager {
         }
     }
     
-    private func readStepsCount(
+    private func getStepsCount(
         from startDate: Date,
         to endDate: Date,
         completion: @escaping (Error?, Int?) -> Void
@@ -155,8 +155,10 @@ extension HealthKitManager {
                 return completion(HealthKitManagerError.readStepsCount, nil)
             }
             
-            let startOfDay = Calendar.current.startOfDay(for: startDate)
-            let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: endDate, options: .strictStartDate)
+            let startDateBeginning = startDate.startOfDay
+            let endDateEnding = endDate.endOfDay
+            
+            let predicate = HKQuery.predicateForSamples(withStart: startDateBeginning, end: endDateEnding, options: .strictStartDate)
             let query = HKStatisticsQuery(
                 quantityType: stepsQuantityType,
                 quantitySamplePredicate: predicate,

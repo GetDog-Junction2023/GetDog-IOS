@@ -20,10 +20,35 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             VStack {
-                Image("level\(level)")
-                    .resizable()
-                    .frame(width: 200, height: 300)
-                    .scaleEffect(x: 1, y: scale, anchor: .bottom)
+                HStack {
+                    if level > 1 {
+                        Image("level\(level - 1)")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 80)
+                            .grayscale(0.99)
+                    } else {
+                        Color.clear.frame(width: 80)
+                    }
+                    
+                    Image("level\(level)")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 300)
+                        .scaleEffect(x: 1, y: scale, anchor: .bottom)
+                    
+                    Spacer()
+                    
+                    if level < 5 {
+                        Image("level\(level + 1)")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 80)
+                            .grayscale(0.99)
+                    } else {
+                        Color.clear.frame(width: 80)
+                    }
+                }
                 
                 VStack {
                     HStack {
@@ -58,6 +83,7 @@ struct HomeView: View {
                         .font(.system(size: 18, weight: .thin))
                         .fontDesign(.rounded)
                         .multilineTextAlignment(.center)
+                        .lineLimit(2, reservesSpace: true)
                     
                     ChartView(stepsEveryDay: $stepsArray)
                         .frame(height: 240)
@@ -100,7 +126,6 @@ struct HomeView: View {
             
             viewModel.getStepsTakenThisWeek { stepsCount in
                 stepsCountThisWeek = stepsCount
-//                weekProgress = min(1.0, Double(6000) / Double(viewModel.weeklyStepGoal))
                 weekProgress = min(1.0, Double(stepsCount) / Double(stepsCount + predictedStepsLeft))
                 level = viewModel.calculateLevel(from: weekProgress)
             }

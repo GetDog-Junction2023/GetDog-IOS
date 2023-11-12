@@ -13,13 +13,20 @@ struct ChartView: View {
     
     var body: some View {
         HStack(alignment: .center, spacing: 10) {
-            ForEach(Array(stepsEveryDay.enumerated()), id: \.offset) { index, element in
+            ForEach(Array(stepsEveryDay.enumerated()), id: \.element) { index, element in
                 BarView(
                     dayOfWeek: index,
                     maxValue: stepsEveryDay.max()!,
                     value: element
                 )
             }
+//            ForEach(stepsEveryDay, id: \.self) { element in
+//                BarView(
+//                    dayOfWeek: stepsEveryDay.firstIndex(of: element)!,
+//                    maxValue: stepsEveryDay.max()!,
+//                    value: element
+//                )
+//            }
         }
     }
 }
@@ -33,24 +40,15 @@ struct BarView: View{
     var body: some View {
         GeometryReader { proxy in
             VStack {
-                ZStack (alignment: .bottom) {
-                    VStack {
-                        Spacer()
-                        
-                        RoundedRectangle(cornerRadius: 12)
-                            .frame(width: 30, height: 200).foregroundColor(.clear)
-                    }
+                VStack {
+                    Spacer()
                     
-                    VStack {
-                        Spacer()
-                        
-                        RoundedRectangle(cornerRadius: 4)
-                            .frame(
-                                width: 30,
-                                height: CGFloat(calculateHeight(maxValue: maxValue, maxHeight: proxy.size.height))
-                            )
-                            .foregroundColor(.orange)
-                    }
+                    RoundedRectangle(cornerRadius: 4)
+                        .frame(
+                            width: 30,
+                            height: abs(CGFloat(calculateHeight(maxHeight: proxy.size.height)))
+                        )
+                        .foregroundColor(.orange)
                 }
                 
                 VStack {
@@ -78,7 +76,7 @@ struct BarView: View{
         }
     }
     
-    private func calculateHeight(maxValue: Int, maxHeight: CGFloat) -> CGFloat {
+    private func calculateHeight(maxHeight: CGFloat) -> CGFloat {
         let percentage = CGFloat(value) / CGFloat(maxValue)
         return min(maxHeight, maxHeight * percentage) - 40
     }

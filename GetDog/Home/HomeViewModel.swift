@@ -46,7 +46,7 @@ final class HomeViewModel: ObservableObject {
             return
         }
         
-        healthKitManager.readStepsTaken(from: startOfTheWeek, to: Date()) { error, stepsCount in
+        healthKitManager.getStepsTaken(from: startOfTheWeek, to: Date()) { error, stepsCount in
             if let error {
                 print(error)
                 return
@@ -75,17 +75,17 @@ final class HomeViewModel: ObservableObject {
         }
         
         let dispatchGroup = DispatchGroup()
-        let dispatchQueue = DispatchQueue(label: "any-label-name")
+        let dispatchQueue = DispatchQueue(label: "my_queue")
         let dispatchSemaphore = DispatchSemaphore(value: 0)
         
         dispatchQueue.async { [self] in
             for currentDate in dateArray {
                 let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: currentDate)!
-
+                
                 dispatchGroup.enter()
                 
-                healthKitManager.readStepsTaken(from: currentDate, to: nextDay) { error, stepsCount in
-                    if let error = error {
+                healthKitManager.getStepsTaken(from: currentDate, to: nextDay) { error, stepsCount in
+                    if let _ = error {
                         return completion([0, 0, 0, 0, 0, 0, 0])
                     }
                     
