@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8209AD282B00B31400D54370 /* StepsPrediction.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8209AD272B00B31400D54370 /* StepsPrediction.mlmodel */; };
+		8209AD2A2B00B31900D54370 /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 8209AD292B00B31900D54370 /* main.py */; };
+		8209AD2C2B00B38F00D54370 /* determine_mode_params.py in Resources */ = {isa = PBXBuildFile; fileRef = 8209AD2B2B00B38F00D54370 /* determine_mode_params.py */; };
 		82ED9D102AFFAFB900E8C107 /* GetDogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D0F2AFFAFB900E8C107 /* GetDogApp.swift */; };
 		82ED9D142AFFAFBB00E8C107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82ED9D132AFFAFBB00E8C107 /* Assets.xcassets */; };
 		82ED9D172AFFAFBB00E8C107 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82ED9D162AFFAFBB00E8C107 /* Preview Assets.xcassets */; };
@@ -21,7 +24,6 @@
 		82ED9D392AFFB63800E8C107 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D382AFFB63800E8C107 /* HomeViewModel.swift */; };
 		82ED9D3D2AFFDA2600E8C107 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D3C2AFFDA2600E8C107 /* Date+Extension.swift */; };
 		82ED9D402B0002A700E8C107 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D3F2B0002A700E8C107 /* ProgressView.swift */; };
-		82ED9D452B003B8E00E8C107 /* StepsPrediction.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D442B003B8E00E8C107 /* StepsPrediction.mlmodel */; };
 		82ED9D472B00411200E8C107 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D462B00411200E8C107 /* ChartView.swift */; };
 		82ED9D4F2B00714200E8C107 /* GetDogWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D4E2B00714200E8C107 /* GetDogWatchApp.swift */; };
 		82ED9D512B00714200E8C107 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D502B00714200E8C107 /* HomeView.swift */; };
@@ -85,6 +87,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8209AD272B00B31400D54370 /* StepsPrediction.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = StepsPrediction.mlmodel; sourceTree = "<group>"; };
+		8209AD292B00B31900D54370 /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		8209AD2B2B00B38F00D54370 /* determine_mode_params.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = determine_mode_params.py; sourceTree = "<group>"; };
 		82ED9D0C2AFFAFB900E8C107 /* GetDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ED9D0F2AFFAFB900E8C107 /* GetDogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDogApp.swift; sourceTree = "<group>"; };
 		82ED9D132AFFAFBB00E8C107 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,7 +106,6 @@
 		82ED9D3A2AFFB8A100E8C107 /* GetDog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GetDog.entitlements; sourceTree = "<group>"; };
 		82ED9D3C2AFFDA2600E8C107 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		82ED9D3F2B0002A700E8C107 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
-		82ED9D442B003B8E00E8C107 /* StepsPrediction.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = StepsPrediction.mlmodel; sourceTree = "<group>"; };
 		82ED9D462B00411200E8C107 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		82ED9D4C2B00714200E8C107 /* GetDogWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GetDogWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ED9D4E2B00714200E8C107 /* GetDogWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDogWatchApp.swift; sourceTree = "<group>"; };
@@ -152,6 +156,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8209AD262B00B30A00D54370 /* ML */ = {
+			isa = PBXGroup;
+			children = (
+				8209AD292B00B31900D54370 /* main.py */,
+				8209AD2B2B00B38F00D54370 /* determine_mode_params.py */,
+				8209AD272B00B31400D54370 /* StepsPrediction.mlmodel */,
+			);
+			path = ML;
+			sourceTree = "<group>";
+		};
 		82ED9D032AFFAFB900E8C107 = {
 			isa = PBXGroup;
 			children = (
@@ -185,7 +199,7 @@
 				82ED9D332AFFB58000E8C107 /* Managers */,
 				82ED9D3B2AFFDA1900E8C107 /* Extensions */,
 				82ED9D3E2B00029B00E8C107 /* Helpers */,
-				82ED9D412B0031CE00E8C107 /* ModelsML */,
+				8209AD262B00B30A00D54370 /* ML */,
 				82ED9D132AFFAFBB00E8C107 /* Assets.xcassets */,
 				82ED9D152AFFAFBB00E8C107 /* Preview Content */,
 			);
@@ -244,14 +258,6 @@
 				82ED9D3F2B0002A700E8C107 /* ProgressView.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		82ED9D412B0031CE00E8C107 /* ModelsML */ = {
-			isa = PBXGroup;
-			children = (
-				82ED9D442B003B8E00E8C107 /* StepsPrediction.mlmodel */,
-			);
-			path = ModelsML;
 			sourceTree = "<group>";
 		};
 		82ED9D4D2B00714200E8C107 /* GetDogWatch Watch App */ = {
@@ -428,8 +434,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8209AD2A2B00B31900D54370 /* main.py in Resources */,
 				82ED9D172AFFAFBB00E8C107 /* Preview Assets.xcassets in Resources */,
 				82ED9D142AFFAFBB00E8C107 /* Assets.xcassets in Resources */,
+				8209AD2C2B00B38F00D54370 /* determine_mode_params.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +478,7 @@
 				82ED9D3D2AFFDA2600E8C107 /* Date+Extension.swift in Sources */,
 				82ED9D252AFFB1DC00E8C107 /* OnboardingPage.swift in Sources */,
 				82ED9D352AFFB59000E8C107 /* HealthKitManager.swift in Sources */,
-				82ED9D452B003B8E00E8C107 /* StepsPrediction.mlmodel in Sources */,
+				8209AD282B00B31400D54370 /* StepsPrediction.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
