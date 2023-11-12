@@ -9,31 +9,41 @@ import SwiftUI
 
 struct OnboardingButtonView: View {
     
+    var pageModel: OnboardingPage
     var isStartButton: Bool = false
     @ObservedObject var viewModel: OnboardingViewModel
-    @AppStorage("isOnboarding") var isOnboarding: Bool?
+    @AppStorage("isOnboardingCompleted") var isOnboardingCompleted: Bool?
+    @AppStorage("firstLaunchDate") var firstLaunchDate: Date?
     
     var body: some View {
         Button(action: {
             if isStartButton {
-                isOnboarding = false
+                isOnboardingCompleted = true
+                firstLaunchDate = Date()
             } else {
-                withAnimation {
-                    viewModel.goToNextPage()
+                if pageModel.isAccessPage {
+                    viewModel.askHealthAccess {
+                        withAnimation {
+                            viewModel.goToNextPage()
+                        }
+                    }
+                } else {
+                    withAnimation {
+                        viewModel.goToNextPage()
+                    }
                 }
             }
         }) {
             HStack(spacing: 8) {
+                Spacer()
+                
                 Text(isStartButton ? "Let's go" : "Continue")
                 
-                Image(systemName: "arrow.right.circle")
-                    .imageScale(.large)
+                Spacer()
             }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 10)
-            .background(
-                Capsule().strokeBorder(Color.white, lineWidth: 1.25)
-            )
+            .padding()
+            .background(.blue)
+            .cornerRadius(12)
         }
         .accentColor(Color.white)
     }

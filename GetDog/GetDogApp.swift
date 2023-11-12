@@ -8,10 +8,17 @@
 import SwiftUI
 
 @main
-struct GetDogApp: App {
+struct Kids_AppApp: App {
+    
+    @AppStorage("isOnboardingCompleted") var isOnboardingCompleted: Bool = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if !isOnboardingCompleted {
+                OnboardingView()
+            } else {
+                ParentView()
+            }
         }
     }
 }

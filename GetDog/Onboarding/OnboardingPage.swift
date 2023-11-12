@@ -9,8 +9,9 @@ import Foundation
 import SwiftUI
 
 struct OnboardingPage: Identifiable, Hashable {
-    var id = UUID()
-    var title: String
-    var headline: String
-    var image: String
+    let id = UUID()
+    let title: String
+    let headline: String
+    let image: String
+    var isAccessPage: Bool = false
 }

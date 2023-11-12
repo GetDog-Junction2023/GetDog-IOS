@@ -15,17 +15,16 @@ struct OnboardingView: View {
         TabView(selection: $viewModel.selectedPage) {
             ForEach(Array(viewModel.onboardingPages.enumerated()), id: \.element) { index, page in
                 OnboardingPageView(page: page, viewModel: viewModel).tag(index)
+                    .padding(.top, 100)
+                    .padding(.bottom, 100)
             }
         }
         .ignoresSafeArea()
         .tabViewStyle(PageTabViewStyle())
+        .padding(.bottom, 20)
     }
     
     func goToNextPage() {
         viewModel.selectedPage += 1
     }
 }
-
-//#Preview {
-//    OnboardingView()
-//}

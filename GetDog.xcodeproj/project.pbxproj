@@ -8,17 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		82ED9D102AFFAFB900E8C107 /* GetDogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D0F2AFFAFB900E8C107 /* GetDogApp.swift */; };
-		82ED9D122AFFAFB900E8C107 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D112AFFAFB900E8C107 /* ContentView.swift */; };
 		82ED9D142AFFAFBB00E8C107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82ED9D132AFFAFBB00E8C107 /* Assets.xcassets */; };
 		82ED9D172AFFAFBB00E8C107 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82ED9D162AFFAFBB00E8C107 /* Preview Assets.xcassets */; };
+		82ED9D1E2AFFB19C00E8C107 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D1D2AFFB19C00E8C107 /* ParentView.swift */; };
+		82ED9D232AFFB1D600E8C107 /* OnboardingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D222AFFB1D600E8C107 /* OnboardingButtonView.swift */; };
+		82ED9D252AFFB1DC00E8C107 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D242AFFB1DC00E8C107 /* OnboardingPage.swift */; };
+		82ED9D292AFFB1E300E8C107 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D282AFFB1E300E8C107 /* OnboardingView.swift */; };
+		82ED9D2D2AFFB21A00E8C107 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D2C2AFFB21A00E8C107 /* OnboardingViewModel.swift */; };
+		82ED9D2F2AFFB23100E8C107 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D2E2AFFB23100E8C107 /* OnboardingPageView.swift */; };
+		82ED9D322AFFB32B00E8C107 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D312AFFB32B00E8C107 /* HomeView.swift */; };
+		82ED9D352AFFB59000E8C107 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D342AFFB59000E8C107 /* HealthKitManager.swift */; };
+		82ED9D392AFFB63800E8C107 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D382AFFB63800E8C107 /* HomeViewModel.swift */; };
+		82ED9D3D2AFFDA2600E8C107 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D3C2AFFDA2600E8C107 /* Date+Extension.swift */; };
+		82ED9D402B0002A700E8C107 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D3F2B0002A700E8C107 /* ProgressView.swift */; };
+		82ED9D452B003B8E00E8C107 /* StepsPrediction.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D442B003B8E00E8C107 /* StepsPrediction.mlmodel */; };
+		82ED9D472B00411200E8C107 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED9D462B00411200E8C107 /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		82ED9D0C2AFFAFB900E8C107 /* GetDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ED9D0F2AFFAFB900E8C107 /* GetDogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDogApp.swift; sourceTree = "<group>"; };
-		82ED9D112AFFAFB900E8C107 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		82ED9D132AFFAFBB00E8C107 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82ED9D162AFFAFBB00E8C107 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		82ED9D1D2AFFB19C00E8C107 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
+		82ED9D222AFFB1D600E8C107 /* OnboardingButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingButtonView.swift; sourceTree = "<group>"; };
+		82ED9D242AFFB1DC00E8C107 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
+		82ED9D282AFFB1E300E8C107 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		82ED9D2C2AFFB21A00E8C107 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		82ED9D2E2AFFB23100E8C107 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
+		82ED9D312AFFB32B00E8C107 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		82ED9D342AFFB59000E8C107 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		82ED9D382AFFB63800E8C107 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		82ED9D3A2AFFB8A100E8C107 /* GetDog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GetDog.entitlements; sourceTree = "<group>"; };
+		82ED9D3C2AFFDA2600E8C107 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		82ED9D3F2B0002A700E8C107 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		82ED9D442B003B8E00E8C107 /* StepsPrediction.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = StepsPrediction.mlmodel; sourceTree = "<group>"; };
+		82ED9D462B00411200E8C107 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +76,15 @@
 		82ED9D0E2AFFAFB900E8C107 /* GetDog */ = {
 			isa = PBXGroup;
 			children = (
+				82ED9D3A2AFFB8A100E8C107 /* GetDog.entitlements */,
 				82ED9D0F2AFFAFB900E8C107 /* GetDogApp.swift */,
-				82ED9D112AFFAFB900E8C107 /* ContentView.swift */,
+				82ED9D1D2AFFB19C00E8C107 /* ParentView.swift */,
+				82ED9D302AFFB31100E8C107 /* Home */,
+				82ED9D212AFFB1C900E8C107 /* Onboarding */,
+				82ED9D332AFFB58000E8C107 /* Managers */,
+				82ED9D3B2AFFDA1900E8C107 /* Extensions */,
+				82ED9D3E2B00029B00E8C107 /* Helpers */,
+				82ED9D412B0031CE00E8C107 /* ModelsML */,
 				82ED9D132AFFAFBB00E8C107 /* Assets.xcassets */,
 				82ED9D152AFFAFBB00E8C107 /* Preview Content */,
 			);
@@ -65,6 +97,60 @@
 				82ED9D162AFFAFBB00E8C107 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		82ED9D212AFFB1C900E8C107 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				82ED9D282AFFB1E300E8C107 /* OnboardingView.swift */,
+				82ED9D2C2AFFB21A00E8C107 /* OnboardingViewModel.swift */,
+				82ED9D2E2AFFB23100E8C107 /* OnboardingPageView.swift */,
+				82ED9D222AFFB1D600E8C107 /* OnboardingButtonView.swift */,
+				82ED9D242AFFB1DC00E8C107 /* OnboardingPage.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		82ED9D302AFFB31100E8C107 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				82ED9D312AFFB32B00E8C107 /* HomeView.swift */,
+				82ED9D382AFFB63800E8C107 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		82ED9D332AFFB58000E8C107 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				82ED9D342AFFB59000E8C107 /* HealthKitManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		82ED9D3B2AFFDA1900E8C107 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				82ED9D3C2AFFDA2600E8C107 /* Date+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		82ED9D3E2B00029B00E8C107 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				82ED9D462B00411200E8C107 /* ChartView.swift */,
+				82ED9D3F2B0002A700E8C107 /* ProgressView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		82ED9D412B0031CE00E8C107 /* ModelsML */ = {
+			isa = PBXGroup;
+			children = (
+				82ED9D442B003B8E00E8C107 /* StepsPrediction.mlmodel */,
+			);
+			path = ModelsML;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +223,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82ED9D122AFFAFB900E8C107 /* ContentView.swift in Sources */,
+				82ED9D1E2AFFB19C00E8C107 /* ParentView.swift in Sources */,
+				82ED9D392AFFB63800E8C107 /* HomeViewModel.swift in Sources */,
+				82ED9D2F2AFFB23100E8C107 /* OnboardingPageView.swift in Sources */,
+				82ED9D472B00411200E8C107 /* ChartView.swift in Sources */,
+				82ED9D2D2AFFB21A00E8C107 /* OnboardingViewModel.swift in Sources */,
 				82ED9D102AFFAFB900E8C107 /* GetDogApp.swift in Sources */,
+				82ED9D402B0002A700E8C107 /* ProgressView.swift in Sources */,
+				82ED9D292AFFB1E300E8C107 /* OnboardingView.swift in Sources */,
+				82ED9D322AFFB32B00E8C107 /* HomeView.swift in Sources */,
+				82ED9D232AFFB1D600E8C107 /* OnboardingButtonView.swift in Sources */,
+				82ED9D3D2AFFDA2600E8C107 /* Date+Extension.swift in Sources */,
+				82ED9D252AFFB1DC00E8C107 /* OnboardingPage.swift in Sources */,
+				82ED9D352AFFB59000E8C107 /* HealthKitManager.swift in Sources */,
+				82ED9D452B003B8E00E8C107 /* StepsPrediction.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,17 +367,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GetDog/GetDog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GetDog/Preview Content\"";
 				DEVELOPMENT_TEAM = 3868R87QJX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to access your Health data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow this app to write data to Health app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,17 +400,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GetDog/GetDog.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GetDog/Preview Content\"";
 				DEVELOPMENT_TEAM = 3868R87QJX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to access your Health data";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow this app to write data to Health app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
